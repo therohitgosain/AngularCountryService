@@ -47,3 +47,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![application-local](application-local.png "application-local")
 
+
+![application-local2](application-local2.png "application-local2")
+
