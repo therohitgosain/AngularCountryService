@@ -1,0 +1,43 @@
+<br />
+<br />
+<div>
+  <form [formGroup]="searchForm">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInput"
+        placeholder="Search country .."
+        formControlName="name"
+      />
+    </div>
+
+    <hr />
+
+    <div class="col-sm-12">
+      <div>
+        <div class="card text-center m-b-10" *ngFor="let item of data">
+          <div class="card-header text-left">
+            {{ item.alpha3Code }}
+          </div>
+          <div class="card-body">
+            <div class="col-sm-8 f-left">
+              <div class="card-title text-left">{{ item.name }}</div>
+              <p class="card-text text-left" class="card-left">
+                {{ item.capital }} ,
+                <span class="card-text text-left" class="card-right">{{
+                  item.subregion
+                }}</span>
+              </p>
+            </div>
+            <div class="col-sm-4 f-right text-muted">
+              Population:
+              {{ item.population }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </form>
+</div>
