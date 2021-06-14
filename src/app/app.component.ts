@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     this.searchForm.controls['name'].valueChanges.subscribe((formvalue) => {
       if (formvalue != undefined && formvalue != '' && formvalue.trim() != '') {
         let items = this.rawData.filter((item) =>
-          item.name.toLowerCase().includes(formvalue)
+          item.name.toLowerCase().includes(formvalue.toLowerCase())
         );
         this.data = items;
       } else {
